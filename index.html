@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Taylor Jarvis</title>
+    <meta lang="en">
+
+    <style>
+        @font-face {
+            font-family: "MainFont";
+            src: url(SourGummy-VariableFont_wdth\,wght.ttf);
+        }
+
+        body
+        {
+            background-color: #8b9282;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            margin: 0;
+            padding: 0;
+
+            font-family: "MainFont";
+            text-align: center;
+        }
+
+        @media (max-width: 699px) 
+        {
+            h1
+            {
+                font-size: 12.5vw
+            }
+            h2
+            {
+                font-size: 7.5vw;
+                margin-bottom: 5px;
+            }
+
+            p
+            {
+                font-size: 4vw;
+            }   
+            
+            .landing img
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (min-width: 700px) and (max-width: 999px) 
+        {
+            h1
+            {
+                font-size: 10.5vw
+            }
+            h2
+            {
+                font-size: 5.5vw;
+                margin-bottom: 5px;
+            }
+
+            p
+            {
+                font-size: 3vw;
+            }     
+            
+            .landing img
+            {
+                width: 80%;
+                height: auto;
+            }   
+        }
+
+        @media (min-width: 1000px) and (max-width: 1279px) 
+        {
+            h1
+            {
+                font-size: 8.5vw
+            }
+            h2
+            {
+                font-size: 3.5vw;
+                margin-bottom: 5px;
+            }
+
+            p
+            {
+                font-size: 2vw;
+            }  
+
+            .landing img
+            {
+                width: 60%;
+                height: auto;
+            }     
+        }
+
+        @media (min-Width: 1280px) 
+        {
+            h1
+            {
+                font-size: 7.5vw
+            }
+            h2
+            {
+                font-size: 2.5vw;
+                margin-bottom: 5px;
+            }
+    
+            p
+            {
+                font-size: 1.5vw;
+            }
+
+
+            .landing img
+            {
+                width: 40%;
+                height: auto;
+            }
+        }
+
+        @media (orientation: portrait) 
+        {
+            .project-Row-Images
+            {
+                display: flex;
+
+                flex-direction: column;
+
+                border-radius: 30px;
+
+                align-items: center;
+
+                width: 100%;
+
+            }
+
+            .project-Row-Images div
+            {
+                display: flex;
+                flex-direction: column;
+
+                width: fit-content;
+            }
+
+            .project-Row-Images img
+            {
+                border-radius: 30px;
+
+                margin: 1vw;
+
+                min-width: 90vw;
+                max-width: 90vw;
+
+                min-height: 61vw;
+                max-height: 61vw;
+
+                transition: all ease 500ms;
+            }
+        }
+
+        @media (orientation: landscape)
+        {
+            .project-Row-Images
+            {
+                display: grid;
+
+                overflow-x:  scroll;
+
+                overflow-y: visible;
+
+                border-radius: 30px;
+
+            }
+
+            .project-Row-Images img
+            {
+                border-radius: 30px;
+
+                margin: 1vw;
+
+                min-width: 40vw;
+                max-width: 40vw;
+
+                min-height: 27vw;
+                max-height: 27vw;
+
+                transition: all ease 500ms;
+            }
+
+            .project-Row-Images img:hover
+            {
+                border-radius: 0;
+
+                scale: 1.05;
+
+                cursor: pointer;
+            }
+        }
+
+        .project-Row-Images.cover img
+        {
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .project-Row-Images.fill img
+        {
+            object-fit: fill;
+            object-position: center;
+        }
+
+        .image-Full
+        {
+            z-index: 100;
+
+            position: fixed;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-direction: column;
+
+            width: 100%;
+            height: 100%;
+
+            scale: 0;
+            
+            top: 0;
+            
+            transition: scale ease 0.15s;
+            backdrop-filter: blur(5px);
+
+            cursor: not-allowed;
+        }
+
+        .image-Full img
+        {
+            margin: 0px;
+
+            max-height: 90%;
+            max-width: 90%;
+
+            cursor: default;
+
+        }
+
+        .image-Full button
+        {
+            border: none;
+
+            font-family: "MainFont";
+
+            color: white;
+            background-color:crimson;
+
+            font-size: inherit;
+
+            cursor: not-allowed;
+        }
+
+        .project-Row{
+            display: flex;
+
+            justify-content: center;
+
+            flex-direction: column;
+
+            text-align: center;
+
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="image-full" class="image-Full" onclick="closeImage()">
+        <img  onmouseenter="canClose = false" onmouseleave="canClose = true" id="image-full-img"src="https://images.unsplash.com/photo-1448375240586-882707db888b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9yZXN0JTIwd2FsbHBhcGVyfGVufDB8fDB8fHww">
+        <button onclick="closeImage()">Close Image</button>
+    </div>
+
+    <div class="landing">
+        <img src="faces2.png" alt="">
+    </div>
+
+    <div class="project-Row">
+        <h2>GCSE</h2>
+        <p>Here are some designs I made In my Graphic Design GCSE</p>
+        <div class="project-Row-Images fill">
+            <div>
+                <img src="gcse/Drink" onclick="openImage(this)">
+                <img src="gcse/google" onclick="openImage(this)">
+            </div>
+            <div>
+                <img src="gcse/Sweets" onclick="openImage(this)">
+                <img src="gcse/Record" onclick="openImage(this)">
+            </div>
+        </div>
+    </div>
+
+    <div class="project-Row">
+        <h2>Glitch Project</h2>
+        <p>My collage glitch project from the inital ideas to my final design</p>
+        <div class="project-Row-Images cover">
+            <div>
+                <img src="Glitch/concept.jpg" onclick="openImage(this)">
+                <img src="Glitch/tv.jpg" onclick="openImage(this)">
+            </div>
+            <div>
+                <img src="Glitch/phone.jpg" onclick="openImage(this)">
+                <img src="Glitch/fam.jpg" onclick="openImage(this)">
+            </div>
+        </div>
+    </div>
+    <div class="project-Row">
+        <h2>Fanart</h2>
+        <p>Fanart I made for my favourite singer.</p>
+        <div class="project-Row-Images cover">
+            <div>
+                <img src="Fanart/Coffee.png" onclick="openImage(this)">
+                <img src="Fanart/CoffeeText.png" onclick="openImage(this)">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function openImage(element)
+    {
+        document.getElementById("image-full-img").src = element.src
+        document.getElementById("image-full").style.scale = "1"
+
+    }
+
+    var canClose = true
+
+    function closeImage()
+    {
+        if(canClose)
+        {
+            document.getElementById("image-full").style.scale = "0"
+        }
+    }
+</script>

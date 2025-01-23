@@ -14,8 +14,6 @@ body
 
     font-family: "MainFont";
     text-align: center;
-
-    max-width: 2560px;
 }
 
 @media (max-width: 699px) 

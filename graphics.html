@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Graphic Design | Taylor Jarvis </title>
+    <meta lang="en">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="image-full" class="image-Full" onclick="closeImage()">
+        <img onmouseenter="canClose = false" onmouseleave="canClose = true" id="image-full-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9yZXN0JTIwd2FsbHBhcGVyfGVufDB8fDB8fHww">
+        <button onclick="closeImage()">Close Image</button>
+    </div>
+
+    <a href="index.html">
+        <div class="landing">
+            <img src="Logos/FacesTran.png" alt="">
+        </div>
+        <p>Home</p>
+    </a>
+    
+    <div class="project-Row">
+        <h2>Designs</h2>
+        <p>Here are some designs I have made in the past.</p>
+        <div class="project-Row-Images fill">
+            <div>
+                <img src="Graphics/Drink.png" onclick="openFullImage(this)">
+                <img src="Graphics/Record.png" onclick="openFullImage(this)">
+            </div>
+            <div>
+                <img src="Graphics/google.png" onclick="openFullImage(this)">
+                <img src="Graphics/Sweets.png" onclick="openFullImage(this)">
+            </div>
+            <div>
+                <img src="Graphics/Coffee.png" style="object-fit: cover;" onclick="openFullImage(this)">
+                <img src="Graphics/CoffeeText.png" style="object-fit: cover;" onclick="openFullImage(this)">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openFullImage(element)
+        {
+            document.getElementById("image-full-img").src = element.src
+            document.getElementById("image-full").style.scale = "1"
+        }
+
+        function openProjectPage(page)
+        {
+            window.location.href = page;
+        }
+    
+        var canClose = true
+    
+        function closeImage()
+        {
+            if(canClose)
+            {
+                document.getElementById("image-full").style.scale = "0"
+            }
+        }
+    </script>
+</body>

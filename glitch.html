@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Taylor Jarvis</title>
+    <title>Glitch | Taylor Jarvis </title>
     <meta lang="en">
 
     <link rel="stylesheet" href="styles.css">
@@ -14,58 +14,43 @@
         <button onclick="closeImage()">Close Image</button>
     </div>
 
-    <div class="landing">
-        <img src="Logos/FacesTran.png" alt="">
-    </div>
+    <a href="index.html">
+        <div class="landing">
+            <img src="Logos/FacesTran.png" alt="">
+        </div>
+        <p>Home</p>
+    </a>
 
     <div class="project-Row">
-        <h2>Graphic Design</h2>
-        <p>Click the image to see this projects details</p>
+        <h2>Ideas Stage</h2>
+        <p>These are some ideas I had leading up to my final piece.</p>
         <div class="project-Row-Images cover">
             <div>
-                <img src="Graphics/Coffee.png" onclick="openProjectPage('graphics.html')">
+                <img src="Glitch/book1.jpg" onclick="openFullImage(this)">
+                <img src="Glitch/book2.jpg" onclick="openFullImage(this)">
             </div>
         </div>
     </div>
 
     <div class="project-Row">
-        <h2>Glitch Project</h2>
-        <p>Click the image to see this projects details</p>
+        <h2>Experiments</h2>
+        <p>Before I began working on my final piece I did some experimental pieces to get an idea of the style.</p>
         <div class="project-Row-Images cover">
             <div>
-                <img src="Glitch/fam.jpg" onclick="openProjectPage('glitch.html')">
+                <img src="Glitch/phone.jpg" onclick="openFullImage(this)">
+                <img src="Glitch/tv.jpg" onclick="openFullImage(this)">
             </div>
         </div>
     </div>
 
     <div class="project-Row">
-        <h2>Tile Museum</h2>
-        <p>Click the image to see this projects details</p>
+        <h2>Final Result</h2>
         <div class="project-Row-Images cover">
             <div>
-                <img src="Tiles/2ppl.jpg" style="object-position: top;" onclick="openProjectPage('tile.html')">
+                <img src="Glitch/fam.jpg" onclick="openFullImage(this)">
             </div>
         </div>
     </div>
-
-    <div class="project-Row">
-        <h2>Miscellaneous</h2>
-        <p>Click an image to see its full size</p>
-        <div class="project-Row-Images cover">
-            <div>
-                <img src="misc/bag.jpg" onclick="openFullImage(this)">
-                <img src="misc/card.jpg" onclick="openFullImage(this)">
-            </div>
-            <div>
-                <img src="misc/cup.jpg" onclick="openFullImage(this)">
-                <img src="misc/pot.jpg" onclick="openFullImage(this)">
-            </div>
-            <div>
-                <img src="misc/pic.jpg" onclick="openFullImage(this)">
-            </div>
-        </div>
-    </div>
-
 
     <script>
         function openFullImage(element)
